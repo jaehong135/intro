@@ -1,0 +1,265 @@
+@charset "UTF-8";
+@import url(reset.css);
+@import url(font.css);
+
+* {font-size: 10px;}
+body {
+    padding: 0 20px;
+    color: #d7d7d7;
+    background: #0C0D0F; 
+    max-width: 1920px; 
+    margin: 0 auto; 
+    font-family: 'Pretendard-Light';
+    font-weight: 300;
+}
+
+/* 헤더 영역 */
+header {
+    max-width: 1660px; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    flex-wrap: wrap;
+}
+
+header h1 {width: 180px;}
+header h1 a{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'Pretendard-Bold';
+    font-weight: 700;
+}
+header h1 img{padding-right: 6px; max-width: 100%;}
+
+header nav {
+    margin: 10px 0;
+}
+header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header nav ul li{
+    padding: 10px 20px;
+}
+header nav ul li a {
+    display: flex;
+    font-size: 16px;
+}
+
+header .contact {
+    margin: 10px 0;
+}
+header .contact a span{
+    background: #FFBEAD;
+    border-radius: 200px;
+    padding: 0.6rem 2rem; 
+    font-size: 16px;
+    display: inline-block;
+}
+
+/* 콘텐츠 영역 */
+.contant {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1660px; 
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.contant section {
+    background: red;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    max-height: none;
+    min-height: 400px;
+}
+
+.contant section a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.contant section a p {
+    font-size: 16px;
+    line-height: 1.4; 
+    max-width: 260px;
+    text-align: center;
+}
+
+.contant section a p span {
+    font-family: 'Pretendard-Bold';
+    font-weight: 700; 
+    font-size: 16px;
+}
+
+.contant section a > figure {
+    width: 60%;
+    max-width: 24rem;
+    margin-bottom: 40px;
+}
+
+.contant section a > figure img{
+    width: 100%;
+}
+
+.contant section a .text_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.contant section a .text_box > figure{
+    margin-top: 20px;
+}
+
+.contant section a .text_box > figure > img {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 60px;
+}
+
+/* 배경 이미지 섹션 */
+.contant section.con1 {
+    background: url(../images/con1bg.jpg) no-repeat center center; 
+    background-size: cover;
+    position: relative; 
+}
+
+.contant section.con1::before {
+    content: ""; 
+    width: 100%;
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.7); 
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.contant section.con2 {
+    background: url(../images/con2bg.png) no-repeat center center; 
+    background-size: cover;
+    position: relative; 
+}
+
+.contant section.con2::before {
+    content: ""; 
+    width: 100%;
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.7); 
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.contant section.con3 {
+    background: url(../images/Rectangle\ 4507.jpg) no-repeat center center; 
+    background-size: cover;
+    position: relative; 
+}
+
+.contant section.con3::before {
+    content: ""; 
+    width: 100%;
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.7); 
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.contant section.con3 a .text_box p{ 
+    margin-bottom: 20px;
+}
+
+/* 태블릿 미디어 쿼리 */
+@media screen and (min-width: 768px) {
+    body {
+        padding: 0 40px;
+    }
+    
+    header {
+        margin-top: 30px;
+    }
+    
+    header nav ul li {
+        padding: 0 20px;
+    }
+    
+    .contant {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 5rem;
+    }
+    
+    .contant section {
+        width: calc(50% - 15px);
+    }
+    
+    .contant section a .text_box {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    
+    .contant section a p {
+        text-align: left;
+    }
+}
+
+/* 데스크탑 미디어 쿼리 */
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 0 100px;
+    }
+    
+    header {
+        margin-top: 40px;
+        flex-wrap: nowrap;
+    }
+    
+    header nav ul li {
+        padding: 0 40px;
+    }
+    
+    header .contact a span {
+        padding: 0.6rem 3.2rem;
+    }
+    
+    .contant {
+        flex-direction: row;
+        gap: 50px;
+        padding-top: 12rem;
+        height: calc(100vh - 120px);
+    }
+    
+    .contant section {
+        width: 30%;
+        flex-grow: 1;
+        max-height: 667px;
+    }
+    
+    .contant section a > figure {
+        margin-bottom: 105px;
+    }
+    
+    .contant section a .text_box {
+        padding: 0 57px;
+    }
+}
