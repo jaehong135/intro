@@ -2,7 +2,6 @@
 @import url(reset.css);
 @import url(font.css);
 
-* {font-size: 10px;}
 body {
     padding: 0 20px;
     color: #d7d7d7;
@@ -272,4 +271,55 @@ header .contact a span{
     .contant section a .text_box {
         padding: 0 57px;
     }
+}
+
+
+
+
+/* 팝업 전체 배경 */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-size: 20px;
+    color: #000;
+}
+
+/* 팝업 내용 박스 */
+.popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    line-height: 1.6;
+    /* word-break: keep-all; */
+    text-align: justify;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 부드러운 팝업 효과 */
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
 }
