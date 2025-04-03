@@ -58,6 +58,7 @@ header .contact a span{
     padding: 0.6rem 2rem; 
     font-size: 16px;
     display: inline-block;
+    color: #000;
 }
 
 /* 콘텐츠 영역 */
@@ -68,6 +69,7 @@ header .contact a span{
     max-width: 1660px; 
     margin: 0 auto;
     padding-top: 3rem;
+    box-sizing: border-box;
 }
 
 .contant section {
@@ -77,6 +79,9 @@ header .contact a span{
     overflow: hidden;
     max-height: none;
     min-height: 400px;
+}
+.contant section::before {
+    transition: .1s;
 }
 
 .contant section a {
@@ -186,6 +191,11 @@ header .contact a span{
 .contant section.con3 a .text_box p{ 
     margin-bottom: 20px;
 }
+
+.contant section:hover::before {
+    background: rgba(0, 0, 0, 0.4); 
+}
+
 
 /* 태블릿 미디어 쿼리 */
 @media screen and (min-width: 768px) {
